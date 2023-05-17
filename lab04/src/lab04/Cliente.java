@@ -1,12 +1,12 @@
-package lab03;
-
-import java.util.*;
+package lab04;
+ 
+import java.util.*;  
 
 public class Cliente {
 
 // Atributos
 	private String nome;
-	private String endereco;
+	private String endereco; 
 	private List<Veiculo> listaVeiculos;
 	private double valorSeguro;
 	
@@ -29,6 +29,9 @@ public class Cliente {
 	public List<Veiculo> getListaVeiculos() {
 		return listaVeiculos;
 	}
+	public double getValorSeguro() {
+		return valorSeguro;
+	}
 	public void setListaVeiculos(List<Veiculo> listaVeiculos) {
 		this.listaVeiculos = listaVeiculos;
 	}
@@ -38,11 +41,19 @@ public class Cliente {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	
-	public String toString() {
-		return "Cliente [nome=" + nome + ", endereco=" + endereco + ", listaVeiculos=" + getListaVeiculos() + "] ";
+	public void setValorSeguro(double valorSeguro) {
+		this.valorSeguro = valorSeguro;
 	}
 	
 
+	public String toString() { //ARRUMAR
+		return "\nnome = " + nome + ", \nendereco = " + endereco + ", \nlistaVeiculos: \n" + getListaVeiculos() + "\n";
+	}
+	
+	public double calculaScore() {
+		CalcSeguro base = CalcSeguro.VALOR_BASE;
+		return base.getFator();
+
+	}
 	
 }
