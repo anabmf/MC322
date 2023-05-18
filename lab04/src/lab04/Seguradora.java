@@ -177,10 +177,10 @@ public class Seguradora {
 	}
 
 	public void transferirSeguro(Cliente transferindo, Cliente transferido) {
-		for (Veiculo veiculo : transferindo.getListaVeiculos()) {
-			transferido.getListaVeiculos().add(veiculo);
-			transferindo.getListaVeiculos().remove(veiculo);
-		}
+		List<Veiculo> temporaria = new ArrayList<Veiculo>();
+		temporaria.addAll(transferindo.getListaVeiculos());
+		transferindo.getListaVeiculos().clear();
+		transferido.getListaVeiculos().addAll(temporaria);
 	}
 
 }

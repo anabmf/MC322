@@ -169,6 +169,8 @@ public class AppMain {
 		Seguradora segura = new Seguradora("segura", "32324040", "email1@email.com", "rua da praca, 1");
 		Veiculo fuscaAzul = new Veiculo("PDP3456", "volkswagen", "fusca", 1989);
 		Veiculo celtaPreto = new Veiculo("SOS5678", "chevrolet", "celta", 2000);
+		Veiculo hb20Branco = new Veiculo("SLK1234", "hyndai", "hb20", 2012);
+		Veiculo unoVermelho = new Veiculo("SQN7890", "fiat", "uno", 2010);
 		Sinistro batida = new Sinistro("03/03/2003", "aquidaban, 400", fachada, fuscaAzul, conpec);
 		Sinistro acidente = new Sinistro("04/04/2004", "aquidaban, 400", fachada, celtaPreto, ana);
 		Sinistro atropelamento = new Sinistro("04/04/2004", "aquidaban, 400", segura, celtaPreto, ana);
@@ -183,8 +185,8 @@ public class AppMain {
 
 		ana.getListaVeiculos().add(fuscaAzul);
 		ana.getListaVeiculos().add(celtaPreto);
-		conpec.getListaVeiculos().add(celtaPreto);
-		conpec.getListaVeiculos().add(fuscaAzul);
+		conpec.getListaVeiculos().add(hb20Branco);
+		conpec.getListaVeiculos().add(unoVermelho);
 
         fachada.gerarSinistro(acidente);
         fachada.gerarSinistro(batida);
