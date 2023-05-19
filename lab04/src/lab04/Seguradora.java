@@ -181,6 +181,7 @@ public class Seguradora {
 		temporaria.addAll(transferindo.getListaVeiculos());
 		transferindo.getListaVeiculos().clear();
 		transferido.getListaVeiculos().addAll(temporaria);
+		calcularPrecoSeguroCliente(transferido);
 	}
 
 }
